@@ -128,6 +128,10 @@ span {
 
 /*Contenido segnda seccion*/
 
+.mobile {
+    display: none;
+}
+
 .proyectos h2 {
     padding: 2em;
     font-size: 2em;
@@ -213,7 +217,7 @@ span {
 /*Default*/
 
 
-@media (max-width: 752px)and (orientation:portrait) {
+@media (max-width: 1200px) {
     /*Contenido primera seccion*/
 
     .menu {
@@ -221,6 +225,15 @@ span {
     }
 
     /*Contenido segunda seccion*/
+
+    .pc {
+        display: none;
+    }
+
+    .mobile {
+        display: grid;
+    }
+
     .proyectos{
         display: grid;
         height: 90vh;
@@ -256,7 +269,7 @@ span {
 
 /*Contenido primera seccion moviles*/
 
-@media (max-width: 550px) and (orientation: portrait) {
+@media (max-width: 550px) {
 
     .menu {
         width: fit-content;
