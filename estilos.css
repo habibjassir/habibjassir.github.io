@@ -46,8 +46,9 @@ span {
     padding: 10px 20px; 
 }
 
-.menu .home {
-    color: rgb(255, 132, 0);
+.menu a:hover {
+    color: white;
+    transition: ease-in .2s;
 }
 
 .menu li:hover {
@@ -55,8 +56,6 @@ span {
     transition: ease-in .2s;
     padding: 5px;
     border-radius: 100px;
-    
-    color: white;
 }
 
 /*Contenido primera seccion*/
