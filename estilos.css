@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: white;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/*primera seccion*/
+
+.container {
+    width: 100vw;
+    height: 100vh;
+}
+
+span {
+    color: rgb(255, 132, 0);
+}
+
+/* Menu header */
+
+.barranav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    font-size: 20px;
+}
+
+.menu li{
+    list-style: none;
+}
+
+.menu a{
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px; 
+}
+
+.menu .home {
+    color: rgb(255, 132, 0);
+}
+
+.menu li:hover {
+    background-color: rgb(255, 132, 0);
+    transition: ease-in .2s;
+    padding: 5px;
+    border-radius: 100px;
+    
+    color: white;
+}
+
+/*Contenido primera seccion*/
+
+.main {
+    display: grid;
+    height: 80%;
+    text-align: center;
+    grid-template-columns: 8fr 4fr;
+    align-items: center;
+}
+
+.content {
+    display: grid;
+    justify-content: center;
+}
+
+.content h1 {
+    font-size: 3em;
+}
+
+.content p {
+    width: 50vw;
+    font-size: 20px;
+    padding: 1em;
+}
+
+.download {
+    border-radius: 6px;
+    padding: 10px 20px;
+    border: none;
+    color: black;
+    background-color: rgb(255, 132, 0);
+    cursor: pointer;
+}
+
+.download:hover {
+    background-color: rgb(255, 181, 103);
+    color: white;
+}
+
+.foto {
+    display: grid;
+    display: grid;
+    width: 95%;
+}
+
+.perfil {
+    justify-self: center;
+    width: 30vw;
+    clip-path: circle(50% at 50% 50%);
+}
+
+/* Comienzo segunda seccion*/
+
+.container2 {
+    display: grid;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.container2 h2 {
+    background-color: rgb(255, 132, 0);
+    border-radius: 6px;
+    text-align: center;
+    color: white;
+}
+
+/*Contenido segnda seccion*/
+
+.proyectos h2 {
+    padding: 2em;
+    font-size: 2em;
+}
+
+.proyectos{
+    display: grid;
+    height: 78vh;
+    width: 60vw;
+    justify-content:space-evenly;
+    align-content: center;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.proyectos img {
+    width: 100%;
+    clip-path: circle(50%);
+}
+
+.proyectos div {
+    display: grid;
+    width: auto;
+    align-content: center;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 2em;
+}
+
+
+/* footer*/
+
+.footer {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    padding: 2em;
+    background-color: rgb(255, 132, 0);
+    font-size: 10px;
+}
+
+.cajacon {
+    display: grid;
+    justify-content:center;
+    align-content: center;
+    text-align: center;
+}
+
+.contact img {
+    width: 60px;
+    height: 60px;
+    padding: 5px 10px;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.contact li {
+    list-style: none;
+}
+
+.fb:hover, .ig:hover, .git:hover  {
+    -webkit-transform: scale(0.9);
+    transform:scale(0.9);
+    transition: transform 0.2s;
+    border: 5px solid white;
+    border-radius:20px ;
+    background-color: white;
+}
+
+.author {
+    display: grid;
+    text-align: center;
+}
+
+/*Diseño Responsive*/
+
+/*movil*/
+/*Portrait*/
+/*Default*/
+
+
+@media (max-width: 752px)and (orientation:portrait) {
+    /*Contenido primera seccion*/
+
+    .menu {
+        width: fit-content;
+    }
+
+    /*Contenido segunda seccion*/
+    .proyectos{
+        display: grid;
+        height: 90vh;
+        width: 80vw;
+        justify-content: left;
+        align-content: center;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(2, 1fr);
+        overflow-x: scroll;
+        overscroll-behavior-inline: contain;
+    }
+
+    .proyectos div {
+        display: grid;
+        width: 79vw;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .texto p,
+    .texto2 p,
+    .texto3 p {
+        font-size: 1.2em;
+        }
+
+    /*Footer*/
+
+    .footer {
+        height: 100px;
+    }
+ 
+}
+
+/*Contenido primera seccion moviles*/
+
+@media (max-width: 550px) and (orientation: portrait) {
+
+    .menu {
+        width: fit-content;
+        font-size: 18px;
+    }
+
+    .menu a{
+        padding: 6px 12px; 
+    }
+
+    .barranav {
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .main {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        justify-items: center;
+    }
+
+    .content h1 {
+        font-size: 2em;
+    }
+
+    .content p {
+        width: fit-content;
+    }
+    
+    .foto {
+        width: fit-content;
+    }
+    
+    .perfil {
+        width: 60vw;
+    }
+
+    /*Footer*/
+
+    .footer {
+        height: 100px;
+    }
+    
+}
+
+@media (max-width: 400px) and (orientation: portrait) {
+    /*Contenido primera seccion*/
+    .barranav {
+        display: grid;
+        justify-items: center;
+        gap: 10px;
+    }
+
+    .menu {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        font-size: 16px;
+    }
+
+    .logo {
+        font-size: 15px;
+    }
+
+    /*Contenido segunda seccion*/
+    .proyectos{
+        display: grid;
+        height: 90vh;
+        width: 80vw;
+        justify-content: left;
+        align-content: center;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(2, 1fr);
+        overflow-x: scroll;
+    }
+
+    .texto p, .texto2 p, .texto3 p {
+        width: 70vw;
+        height: 50vh;
+        text-align: left;
+        font-size: 20px;
+    }
+
+    /*Footer*/
+
+    .footer {
+        height: 100px;
+    }
+}
+/*fin movil*/
